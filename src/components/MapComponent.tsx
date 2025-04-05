@@ -21,11 +21,17 @@ export default function MapComponent({ restaurants }: MapComponentProps) {
       
       restaurants.forEach(restaurant => {
         if (restaurant.address.location?.coordinates) {
-          const [lat, lng] = restaurant.address.location.coordinates;
+          const [lng, lat] = restaurant.address.location.coordinates;
           bounds.extend([lat, lng]);
           const marker = L.marker([lat, lng])
             .addTo(map)
-            .bindTooltip(restaurant.name, { permanent: false, direction: 'top' })
+            .bindTooltip(`#Top${restaurants.indexOf(restaurant) + 1}:  ${restaurant.name}`, { 
+              permanent: true, 
+              direction: 'top', 
+              className: 'permanent-label', 
+              offset: [0, -10],
+              opacity: 0.9
+            })
             .bindPopup(`
               <div style="min-width: 200px">
                 <h3 style="display: flex; align-items: center;"><img src="${restaurant.logoUrl}" alt="logo" style="height: 25px; margin-right: 5px;" />&nbsp;&nbsp;${restaurant.name}</h3>

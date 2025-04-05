@@ -32,13 +32,11 @@ function App() {
     setError('')
     
     try {
-      const response = await fetch(`https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/${postcode}`, {
+      const response = await fetch(`/api/discovery/uk/restaurants/enriched/bypostcode/${postcode}`, {
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
-          'Origin': window.location.origin
-        },
-        mode: 'cors'
+          'Accept': 'application/json'
+        }
       })
       
       if (!response.ok) {
