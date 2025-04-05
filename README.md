@@ -71,3 +71,9 @@ best-eat/
 - `src/types.ts`: Main TypeScript type definitions
 - `vite.config.ts`: Vite build tool configuration
 - `tsconfig.json`: TypeScript compiler options
+
+## Version 1.0
+![3d7c8bb72e49bfdbe2f4222ba94486a](https://github.com/user-attachments/assets/d0da6533-8ab0-4eef-a1ec-5a93e93c3e98)
+Finish the Zip code search function.
+Display the top 10 restaurants on the map.
+Showing each restaurant's rating and the number of people who rated by clicking the corresponding icon.
