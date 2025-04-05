@@ -99,9 +99,21 @@ best-eat/
 =======
 - `tsconfig.json`: TypeScript compiler options
 
-## Version 1.0
-![3d7c8bb72e49bfdbe2f4222ba94486a](https://github.com/user-attachments/assets/d0da6533-8ab0-4eef-a1ec-5a93e93c3e98)
-Finish the Zip code search function.
-Display the top 10 restaurants on the map.
-Showing each restaurant's rating and the number of people who rated by clicking the corresponding icon.
->>>>>>> 276e23511711c9a05b954377c077add2155415d4
+## Version Information
+
+### Version 1.0.0
+
+- Initial release of the BestEat Restaurant Finder Application.
+- Implemented the API data loading and map loading processes functions.
+- Implemented UK postcode validation functions.
+- Implemented the sorting algorithm for the top ten restaurants, sorting by `rating.starRating` and `rating.count`.
+- Implemented the function to display the filtered restaurant information points on the map.
+- Implemented the function to display restaurant information through map interaction, including name, address, rating, star rating, etc.
+
+### Version 1.0.1
+
+- Added version information and change logs to the README.md.
+- Added text labels of restaurant names on the map, optimized the map interaction effect, and changed the color of the label points when the user clicks on the markers on the map.
+- Optimized the code structure by setting the API from the configuration file, improving the readability and maintainability of the code.
+- Fixed known bugs to ensure the stability and reliability of the application.
+
