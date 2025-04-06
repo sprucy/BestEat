@@ -1,6 +1,6 @@
 interface Cuisine {
     name: string;
-    uniqueName: string;
+    //uniqueName: string;
 }
 export interface Restaurant {
   name: string;

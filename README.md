@@ -1,26 +1,14 @@
 # BestEat Restaurant Finder Application
 
 ## Project Overview
-<<<<<<< HEAD
-The previous Comprest project was a restaurant finder application developed with Python and Streamlit. To address potential performance issues under high concurrent user access, we decided to develop a new BestEat frontend application using React and TypeScript, following the Comprest model, to help users quickly find nearby restaurant information.
+To address potential performance issues under high concurrent user access, we decided to develop a new BestEat frontend application using React and TypeScript to help users quickly find nearby restaurant information.
 
 ## Features
-=======
-=======
-To address potential performance issues under high concurrent user access, we decided to develop a BestEat frontend application using React and TypeScript, following the Comprest model, to help users quickly find nearby restaurant information.
-
-## Features
-=======
->>>>>>> 276e23511711c9a05b954377c077add2155415d4
-- Restaurant Search: Search restaurants by location or name
-- Map Display: Visualize restaurant locations on a map
-- Sorting: Sort by rating, distance, and other criteria
+- Restaurant Search: Search restaurants by location or name.
+- Map Display: Visualize restaurant locations on a map.
+- Sorting: Sort by rating, distance and other criteria.
 
 ## Technology Stack
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 276e23511711c9a05b954377c077add2155415d4
 - React
 - TypeScript
 - Vite
@@ -28,21 +16,13 @@ To address potential performance issues under high concurrent user access, we de
 - CSS Modules
 
 ## Development Environment Requirements
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 276e23511711c9a05b954377c077add2155415d4
 - Node.js v16 or higher
 - npm v8 or higher
 
 ## Installation Steps
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 276e23511711c9a05b954377c077add2155415d4
 1. Install dependencies: `npm install`
 2. Start the project: `npm run dev`
-3. Open browser and visit: `http://localhost:3000`
+3. Open browser and visit: `http://localhost:5173`
 
 ## API Documentation
 The application uses API service to fetch restaurant data:
@@ -50,18 +30,10 @@ The application uses API service to fetch restaurant data:
 - Response format: JSON
 
 ## Deployment Guide
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 276e23511711c9a05b954377c077add2155415d4
 1. Build production version: `npm run build`
 2. Deploy to static file server
 
 ## Directory Structure
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 276e23511711c9a05b954377c077add2155415d4
 ```
 best-eat/
 ├── public/                  # Static resources
@@ -85,23 +57,30 @@ best-eat/
 ```
 
 ## Key Files
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 276e23511711c9a05b954377c077add2155415d4
 - `src/main.tsx`: Application entry file, renders root component
 - `src/App.tsx`: Main application component with core logic
 - `src/types.ts`: Main TypeScript type definitions
 - `vite.config.ts`: Vite build tool configuration
-<<<<<<< HEAD
-- `tsconfig.json`: TypeScript compiler options
-=======
 - `tsconfig.json`: TypeScript compiler options
 
-## Version 1.0
-![3d7c8bb72e49bfdbe2f4222ba94486a](https://github.com/user-attachments/assets/d0da6533-8ab0-4eef-a1ec-5a93e93c3e98)
-Finish the Zip code search function.
-Display the top 10 restaurants on the map.
-Showing each restaurant's rating and the number of people who rated by clicking the corresponding icon.
->>>>>>> 276e23511711c9a05b954377c077add2155415d4
+## Version Information
+
+### Version 1.0
+- Initial release of the BestEat Restaurant Finder Application.
+- Implemented the API data loading and map loading processes functions.
+- Implemented UK postcode validation functions.
+- Implemented the sorting algorithm for the top ten restaurants, sorting by `rating.starRating` and `rating.count`.
+- Implemented the function to display the filtered restaurant information points on the map.
+- Implemented the function to display restaurant information through map interaction, including name, address, rating, star rating, etc.
+
+### Version 1.1
+- Added version information and change logs to the README.md.
+- Added text labels of restaurant names on the map, optimized the map interaction effect, and changed the color of the label points when the user clicks on the markers on the map.
+- Optimized the code structure by setting the API from the configuration file, improving the readability and maintainability of the code.
+- Fixed known bugs to ensure the stability and reliability of the application.
+
+### Version 1.2
+- Added cuisine preference filtering: the system filters all restaurants that offer the user's preferred dishes, sorts them by rating, and displays the top 10 on the map.
+- Improved restaurant marker display on the map with ranking icons.
+- Enhanced rating display by showing ratings with 1 decimal place.
+- Improved restaurant icon interaction on the map with color change when clicked for better visual feedback.

@@ -45,3 +45,19 @@ body, #root {
   padding: 5px;
   border: 1px solid #ccc;
 }
+
+.custom-tooltip {
+  border: none !important;
+  /*color: #1c77c8 !important;*/
+  padding: 0 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  font-weight: bold !important;
+}
+
+.leaflet-tooltip-top:before, 
+.leaflet-tooltip-bottom:before, 
+.leaflet-tooltip-left:before, 
+.leaflet-tooltip-right:before {
+  border: none !important;
+}
