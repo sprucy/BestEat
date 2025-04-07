@@ -85,3 +85,7 @@ best-eat/
 - Enhanced rating display by showing ratings with 1 decimal place.
 - Improved restaurant icon interaction on the map with color change when clicked for better visual feedback.
 
+### Version 1.3
+- Added minimum rating filter and sorting: Users can set their preferred minimum rating, and the system will filter out restaurants with ratings equal to or higher than the set value, then sort them by rating.
+ 
+
