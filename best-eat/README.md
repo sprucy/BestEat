@@ -1,7 +1,7 @@
 # BestEat Restaurant Finder Application
 
 ## Project Overview
-To address potential performance issues under high concurrent user access, we decided to develop a BestEat frontend application using React and TypeScript, to help users quickly find nearby restaurant information.
+The previous Comprest project was a restaurant finder application developed with Python and Streamlit. To address potential performance issues under high concurrent user access, we decided to develop a new BestEat frontend application using React and TypeScript, following the Comprest model, to help users quickly find nearby restaurant information.
 
 ## Features
 - Restaurant Search: Search restaurants by location or name
@@ -73,17 +73,17 @@ best-eat/
 - Implemented the function to display the filtered restaurant information points on the map.
 - Implemented the function to display restaurant information through map interaction, including name, address, rating, star rating, etc.
 
-### Version 1.0
+### Version 1.0.1
 - Added version information and change logs to the README.md.
 - Added text labels of restaurant names on the map, optimized the map interaction effect, and changed the color of the label points when the user clicks on the markers on the map.
 - Optimized the code structure by setting the API from the configuration file, improving the readability and maintainability of the code.
 - Fixed known bugs to ensure the stability and reliability of the application.
 
-### Version 1.1
+### Version 1.1.0
 - Added cuisine preference filtering: the system filters all restaurants that offer the user's preferred dishes, sorts them by rating, and displays the top 10 on the map.
 - Improved restaurant marker display on the map with ranking icons.
 - Enhanced rating display by showing ratings with 1 decimal place.
 - Improved restaurant icon interaction on the map with color change when clicked for better visual feedback.
 
-### Version 1.2
+### Version 1.2.0
 - Added minimum rating filter and sorting: Users can set their preferred minimum rating, and the system will filter out restaurants with ratings equal to or higher than the set value, then sort them by rating.
