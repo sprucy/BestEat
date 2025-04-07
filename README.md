@@ -65,11 +65,7 @@ best-eat/
 
 ## Version Information
 
-<<<<<<< HEAD
-### Version 1.0.0
-=======
 ### Version 1.0
->>>>>>> 405794b304b4730bba4e05de53af303891c7bf87
 - Initial release of the BestEat Restaurant Finder Application.
 - Implemented the API data loading and map loading processes functions.
 - Implemented UK postcode validation functions.
@@ -77,32 +73,18 @@ best-eat/
 - Implemented the function to display the filtered restaurant information points on the map.
 - Implemented the function to display restaurant information through map interaction, including name, address, rating, star rating, etc.
 
-<<<<<<< HEAD
-### Version 1.0
-=======
 ### Version 1.1
->>>>>>> 405794b304b4730bba4e05de53af303891c7bf87
 - Added version information and change logs to the README.md.
 - Added text labels of restaurant names on the map, optimized the map interaction effect, and changed the color of the label points when the user clicks on the markers on the map.
 - Optimized the code structure by setting the API from the configuration file, improving the readability and maintainability of the code.
 - Fixed known bugs to ensure the stability and reliability of the application.
 
-<<<<<<< HEAD
-### Version 1.1
-=======
 ### Version 1.2
->>>>>>> 405794b304b4730bba4e05de53af303891c7bf87
 - Added cuisine preference filtering: the system filters all restaurants that offer the user's preferred dishes, sorts them by rating, and displays the top 10 on the map.
 - Improved restaurant marker display on the map with ranking icons.
 - Enhanced rating display by showing ratings with 1 decimal place.
 - Improved restaurant icon interaction on the map with color change when clicked for better visual feedback.
 
-<<<<<<< HEAD
-### Version 1.2
-- Added minimum rating filter and sorting: Users can set their preferred minimum rating, and the system will filter out restaurants with ratings equal to or higher than the set value, then sort them by rating.
-=======
 ### Version 1.3
-- Added minimum rating filter and sorting: Users can set their preferred minimum rating, and the system will filter out restaurants with ratings equal to or higher than the set value, then sort them by rating.
- 
+- Added minimum rating filter and sorting: Users can set their preferred minimum rating, and the system will filter out restaurants with ratings equal to or higher than the set value, and then sort them by rating.
 
->>>>>>> 405794b304b4730bba4e05de53af303891c7bf87
