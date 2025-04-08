@@ -25,7 +25,7 @@ import Slider from '@mui/material/Slider';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-// 导入React的状态和副作用钩子
+// Import React's state and side-effect hooks
 function App() {
   const [postcode, setPostcode] = useState('')
   const [oldPostcode, setOldPostcode] = useState('');
@@ -35,7 +35,7 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [anyCuisines, setAnyCuisines] = useState(true);
   const [error, setError] = useState('')
-  // 定义客户偏好对话框打开状态，初始为false
+  // Define the state in which the Customer Preferences dialog is open, initially false.
   const [customerPreferenceDialogOpen, setCustomerPreferenceDialogOpen] = useState(false);
   const [minStar, setMinStar] = useState<number>(0);
   const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
@@ -43,9 +43,9 @@ function App() {
 
 
   const fetchRestaurants = async () => {
-    // 清空错误信息
+    // Clear the error message
     setError('')
-    // 尝试获取餐厅数据
+    // Trying to get restaurant data
     try {
       const response = await fetch(`/api${API_CONFIG.DISCOVERY_ENDPOINT}${postcode}`, {
         headers: {
@@ -53,17 +53,17 @@ function App() {
           'Accept': 'application/json'
         }
       })
-      // 如果响应状态码不是200，抛出错误
+      // Throw an error if the response status code is not 200
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
-      // 解析响应数据
+      // Parsing the response data
       const data = await response.json();
-      // 提取菜系列表
-      // 为item指定类型，避免隐式any类型
+      // Extract the list of dishes 
+      // Specify the type for the item to avoid the implicit any type
       const cuisinesAll = data.metaData?.cuisineDetails?.map((item: { name: string }) => item.name) || [];
       setCuisines(cuisinesAll)
-      // 提取餐厅列表
+      // Extract restaurant listings
       const restaurantsAll = data.restaurants || [];
       await new Promise<void>((resolve) => {
         setRestaurants(restaurantsAll);
@@ -74,19 +74,19 @@ function App() {
 
       return restaurantsAll;
     } catch (err) {
-      // 如果发生错误，设置错误信息
+      // If an error occurs, set the error message
       setError(err instanceof Error ? `Request failed: ${err.message}` : 'Failed to obtain data. Please try again.')
       setLoading(false)
       return [];
     }
   }
-  // 定义对餐厅进行排名的函数
+  // Define the function that ranks restaurants
   const rankRestaurants = async () => {
-    // 如果邮政编码为空，直接返回
+    // If the zip code is empty, return it directly
     if (!postcode) return
-    // 验证英国邮编格式
+    // Validate UK zip code format
     const ukPostcodeRegex = /^([A-Za-z][A-Ha-hJ-Yj-y]?[0-9][A-Za-z0-9]? ?[0-9][A-Za-z]{2}|[Gg][Ii][Rr] ?0[Aa]{2})$/;
-    // 如果邮编格式不合法，设置错误信息并返回
+    // If the zip code format is not legal, set error message and return
     if (!ukPostcodeRegex.test(postcode)) {
       setError('Please enter a valid UK postal code format.');
       return;
@@ -97,9 +97,9 @@ function App() {
     }
     else {
       fetchedRestaurants = restaurants;
-    }  // 确保在数据加载完成后再进行排序
+    }  // Ensure that the sorting is done after the data has been loaded
     if (fetchedRestaurants.length > 0) {
-      // 对餐厅列表进行排序，按星级评分和评分数量降序排列
+      // Sort the restaurant list by star rating and number of ratings in descending order.
       const sorted = fetchedRestaurants
         .sort((a: Restaurant, b: Restaurant) => {
           if (b.rating.starRating !== a.rating.starRating) {
@@ -108,9 +108,9 @@ function App() {
           return b.rating.count - a.rating.count;
         })
         .slice(0, 10)
-      // 打印排名后的餐厅列表
+      // Print a list of ranked restaurants
       console.log('Sorted restaurants:', sorted);
-      // 设置排名后的餐厅列表状态
+      // Set the status of the restaurant list after ranking
       setRankedRestaurants(sorted)
     }
   }  
@@ -123,13 +123,13 @@ function App() {
     if (!anyCuisines) {
       const selected = document.querySelectorAll('.MuiAutocomplete-root .MuiChip-root');
       const selectedValues = Array.from(selected).map(chip => chip.textContent);
-      // 过滤掉selectedValues中的null值
+      // Filter out null values in selectedValues
       const validSelectedValues = selectedValues.filter((value): value is string => value !== null);
       setSelectedCuisines(validSelectedValues);
       
       console.log('Selected cuisines:', selectedValues);
       
-      // 筛选出与选择菜系有交集的餐厅
+      // Filtering out restaurants that intersect with the chosen cuisine
       const filteredRestaurants = restaurants.filter(restaurant => {
         const restaurantCuisines = restaurant.cuisines.map(c => c.name);
         return restaurant.rating.starRating >= minStar && 
@@ -138,7 +138,7 @@ function App() {
                );
       });
       
-      // 对筛选后的餐厅进行排序，先按星级评分降序，再按评论数降序
+      // Sort the filtered restaurants, first by star rating in descending order, then by number of reviews in descending order.
       const sorted = filteredRestaurants
         .sort((a: Restaurant, b: Restaurant) => {
           if (b.rating.starRating !== a.rating.starRating) {
@@ -312,7 +312,7 @@ function App() {
     </div>
   )
 }
-// 导出App组件
+// Export App Components
 export default App
 
 
